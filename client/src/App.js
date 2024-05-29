@@ -42,7 +42,7 @@ const TermsAndConditions = React.lazy(() =>
 axios.defaults.baseURL = "http://localhost:8000/";
 // axios.defaults.headers.common["token"] = localStorage.getItem("Authorization");
 function App() {
-  const { user, setUser, userType, setUserType } = useContext(UserContext);
+  const { user, setUser, setUserType } = useContext(UserContext);
 
   const [loading, setLoading] = useState(false);
   useEffect(() => {
