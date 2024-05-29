@@ -39,7 +39,7 @@ const TermsAndConditions = React.lazy(() =>
 );
 
 // axios.defaults.baseURL = "https://farm-works-server.vercel.app/";
-axios.defaults.baseURL = "https://farm-works-server.vercel.app/";
+axios.defaults.baseURL = "http://localhost:8000/";
 // axios.defaults.headers.common["token"] = localStorage.getItem("Authorization");
 function App() {
   const { user, setUser, userType, setUserType } = useContext(UserContext);

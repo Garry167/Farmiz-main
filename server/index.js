@@ -6,6 +6,7 @@ const multer = require("multer");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const jwt = require("jsonwebtoken");
+const crypto = require('crypto');
 
 const farmerRoute = require("./routes/farmer.js");
 const contractorRoute = require("./routes/contractor.js");
@@ -30,11 +31,14 @@ app.use("/api/contractor", contractorRoute);
 app.use("/api/jobs", jobsRoute);
 app.use("/api/labour", labourRoute);
 
+// const randomBytes = crypto.randomBytes(64); // generates 16 random bytes
+// console.log(randomBytes.toString('hex'));
+
 //database connections
-const port = process.env.PORT || 8000;
+const port = 8000;
 mongoose.set("strictQuery", true);
 mongoose
-  .connect(process.env.MONGOURL, {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
