@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
       <div className="w-[75%] mx-auto shadow-2xl shadow-gray-500 p-8">
         <div>
           <h1 className="font-bold text-[33px] text-[#61ce70]">Terms Of Use</h1>
-          <p className="mt-1 font-semibold">May 30, 2018</p>
+          <p className="mt-1 font-semibold">Jan 30, 2024</p>
         </div>
 
         <div>
